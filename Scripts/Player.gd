@@ -15,17 +15,17 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_right"):
 		motion.x = SPEED
-#		$Sprite.play("RUN")
-#		$Sprite.flip_h = false
+		$Sprite.play("WALK")
+		$Sprite.flip_h = false
 	
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = -SPEED
-#		$Sprite.play("RUN")
-#		$Sprite.flip_h = true
+		$Sprite.play("WALK")
+		$Sprite.flip_h = true
 	
 	else:
 		motion.x = 0
-#		$Sprite.play("IDLE")
+		$Sprite.play("IDLE")
 	
 	if.is_on_floor():
 		if Input.is_action_pressed("ui_up"):
